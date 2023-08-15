@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
                 ('username', models.CharField(error_messages={'unique': 'A user with that username already exists.'}, help_text='Required 30 charactes or fewer starting with letter', max_length=32, unique=True, validators=[django.core.validators.RegexValidator('^[a-zA-Z][a-zA-Z0-9_\\.]+$', 'Enter a valud username starting with a-z.This value may contain only letters, numberand underscore characters.', 'invalid')], verbose_name='user name')),
                 ('first_name', models.CharField(blank=True, max_length=30, verbose_name='first name')),
                 ('last_name', models.CharField(blank=True, max_length=30, verbose_name='last name')),
-                ('email', models.EmailField(max_length=254, unique=True,null=True, verbose_name='email address')),
+                ('email', models.EmailField(max_length=254, unique=True, null=True, verbose_name='email address')),
                 ('phone_number', models.BigIntegerField(blank=True, error_messages={'unique': 'A user with this mobile number already exists.'}, null=True, unique=True, validators=[django.core.validators.RegexValidator('^989[0-3,9]\\d{8}$', 'Enter valid mobile number.')], verbose_name='mobile number')),
                 ('is_staff', models.BooleanField(default=False, help_text='Designates whether the user can log into this admin site', verbose_name='staff status')),
                 ('is_active', models.BooleanField(default=True, help_text='Designates whether this user should be treated as active.Unselect this instead of deleting accounts.', verbose_name='active')),
